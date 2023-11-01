@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import getNews from "./apiCalls";
 import AllNewsCards from "./AllNewsCards";
+import { Router } from "react-router-dom";
 
 const App = () => {
   const [news, setNews] = useState([]);
@@ -15,7 +16,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <p>THIS IS MY APP</p> */}
+        <p>THE GOOD TIMES</p>
       </header>
       <div>
         <AllNewsCards news={news} />
