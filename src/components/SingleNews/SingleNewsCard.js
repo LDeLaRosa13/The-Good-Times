@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import './SingleNewsCard.css'
 
-const SingleNewsCards = () => {
+const SingleNewsCards = ({ news }) => {
   const { articleId } = useParams();
 
   const selectedArticle = news.find((article) => article.id === articleId)

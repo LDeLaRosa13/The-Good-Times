@@ -1,7 +1,8 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import getNews from "./apiCalls";
-import AllNewsCards from "./AllNewsCards";
+import getNews from "../apiCalls";
+import AllNewsCards from "../AllNews/AllNewsCards";
+import SingleNewsCards from "../SingleNews/SingleNewsCard";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -22,7 +23,7 @@ const App = () => {
       </div>
       <Routes>
         <Route path='/' element ={<AllNewsCards news={news} />} />
-        <Route path='/article/:articleId' element={<SingleNewsCards />} />
+        <Route path='/article/:articleId' element={<SingleNewsCards news={news} />} />
       </Routes>
     </div>
   );
