@@ -2,7 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import getNews from "./apiCalls";
 import AllNewsCards from "./AllNewsCards";
-import { Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   const [news, setNews] = useState([]);
@@ -19,8 +19,11 @@ const App = () => {
         <p>THE GOOD TIMES</p>
       </header>
       <div>
-        <AllNewsCards news={news} />
       </div>
+      <Routes>
+        <Route path='/' element ={<AllNewsCards news={news} />} />
+        <Route path='/article/:articleId' element={<SingleNewsCards />} />
+      </Routes>
     </div>
   );
 };
