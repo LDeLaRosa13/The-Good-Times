@@ -3,10 +3,17 @@ import { useEffect, useState } from "react";
 import getNews from "../apiCalls";
 import AllNewsCards from "../AllNews/AllNewsCards";
 import SingleNewsCards from "../SingleNews/SingleNewsCard";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import SearchNews from "../Search/SearchNews";
 
 const App = () => {
   const [news, setNews] = useState([]);
+  const [search, setSearch] = useState('')
+  const location = useLocation().pathname
+
+  useEffect(() => {
+    setSearch('')
+  }, [location])
 
   useEffect(() => {
     getNews().then((data) => {
@@ -22,9 +29,10 @@ const App = () => {
       <div>
       </div>
       <Routes>
-        <Route path='/' element ={<AllNewsCards news={news} />} />
+        <Route path='/' element ={<AllNewsCards news={news} search={search} />} />
         <Route path='/article/:articleId' element={<SingleNewsCards news={news} />} />
       </Routes>
+      <SearchNews setSearch={setSearch}/>
     </div>
   );
 };
