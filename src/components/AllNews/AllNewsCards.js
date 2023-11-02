@@ -1,8 +1,10 @@
 import News from "../News/News";
 import { Link } from "react-router-dom";
 
-const AllNewsCards = ({ news }) => {
-  const articles = news.map((article, index) => (
+const AllNewsCards = ({ news, search }) => {
+  const articles = news
+  .filter(news => news.title.toLowerCase().includes(search.toLowerCase()))
+  .map((article, index) => (
     <div key={index}>
       <Link 
       to={`/article/${index}`}>{article.title}
