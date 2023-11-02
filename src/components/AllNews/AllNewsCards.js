@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 const AllNewsCards = ({ news }) => {
   const articles = news.map((article, index) => (
     <div key={index}>
-      <Link to={`/article/${index}`}>{article.title}</Link>
+      <Link 
+      to={`/article/${index}`}>{article.title}
+      <img className="image" src={article.urlToImage} name="image-poster" alt={article.title}/>
+      </Link>
       <News
         source={article.source.id}
         author={article.author}

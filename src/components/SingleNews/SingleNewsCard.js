@@ -5,15 +5,15 @@ import './SingleNewsCard.css'
 const SingleNewsCards = ({ news }) => {
   const { articleId } = useParams();
 
-  const selectedArticle = news.find((article) => article.id === articleId)
+  const selectedArticle = news[articleId]
 
   if (!selectedArticle) {
     return <div>Article not found!</div>
   }
-
+  
   return (
     <div>
-      <p>{selectedArticle.source}</p>
+      <p>{selectedArticle.source.id}</p>
       <h2>{selectedArticle.title}</h2>
       <p>{selectedArticle.author}</p>
       <p>{selectedArticle.description}</p>
