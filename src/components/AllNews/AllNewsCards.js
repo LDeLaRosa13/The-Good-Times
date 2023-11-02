@@ -6,7 +6,7 @@ const AllNewsCards = ({ news }) => {
     <div key={index}>
       <Link 
       to={`/article/${index}`}>{article.title}
-      <img className="image" src={article.urlToImage} name="movie-poster" alt={article.title}/>
+      <img className="image" src={article.urlToImage} name="image-poster" alt={article.title}/>
       </Link>
       <News
         source={article.source.id}
