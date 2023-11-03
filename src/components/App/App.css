@@ -1,0 +1,10 @@
+.App {
+ font-size: 15px;
+}
+
+.App-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  font-size: 20px;
+}

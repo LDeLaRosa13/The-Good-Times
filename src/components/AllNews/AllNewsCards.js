@@ -1,5 +1,6 @@
 import News from "../News/News";
 import { Link } from "react-router-dom";
+import './AllNewsCards.css'
 
 const AllNewsCards = ({ news, search }) => {
   const articles = news

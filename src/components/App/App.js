@@ -26,13 +26,13 @@ const App = () => {
       <header className="App-header">
         <p>THE GOOD TIMES</p>
       </header>
+      {location === '/' && <SearchNews setSearch={setSearch}/>}
       <div>
       </div>
       <Routes>
         <Route path='/' element ={<AllNewsCards news={news} search={search} />} />
         <Route path='/article/:articleId' element={<SingleNewsCards news={news} />} />
       </Routes>
-      <SearchNews setSearch={setSearch}/>
     </div>
   );
 };
