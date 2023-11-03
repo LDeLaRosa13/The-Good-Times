@@ -1,0 +1,12 @@
+.all-news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10rem;
+  padding: 1%;
+}
+
+img {
+  display: flex;
+  width: 20vw;
+  height: 40vh;
+}
