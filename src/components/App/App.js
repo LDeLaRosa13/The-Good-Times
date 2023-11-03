@@ -26,7 +26,7 @@ const App = () => {
       <header className="App-header">
         <p>THE GOOD TIMES</p>
       </header>
-      <SearchNews setSearch={setSearch}/>
+      {location === '/' && <SearchNews setSearch={setSearch}/>}
       <div>
       </div>
       <Routes>

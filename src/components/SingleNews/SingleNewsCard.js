@@ -13,12 +13,10 @@ const SingleNewsCards = ({ news }) => {
   
   return (
     <div>
-      <p>{selectedArticle.source.id}</p>
       <h2>{selectedArticle.title}</h2>
       <p>{selectedArticle.author}</p>
       <p>{selectedArticle.description}</p>
       <p>{selectedArticle.publishedAt}</p>
-      <p>{selectedArticle.url}</p>
     </div>
   )
 }
